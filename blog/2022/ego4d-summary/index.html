@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<!-- _layouts/distill.html -->
+<html>
+  <head>        
+    <!-- Metadata, OpenGraph and Schema.org -->
+    
+
+    <!-- Standard metadata -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Saikiran | Dataset Summary: Ego4D</title>
+    <meta name="author" content="Akkapaka Saikiran" />
+    <meta name="description" content="Notes on the recently announced Ego4D dataset" />
+
+
+    <!-- Bootstrap & MDB -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha512-MoRNloxbStBcD8z3M/2BmnT+rg4IsMxPkXaGh2zD6LGNNFE80W3onsAhRcMAMrSoyWL9xD7Ert0men7vR8LUZg==" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" integrity="sha512-RO38pBRxYH3SoOprtPTD86JFOclM51/XTIdEPh5j8sj4tp8jmQIx26twG52UaLi//hQldfrh7e51WzP9wuP32Q==" crossorigin="anonymous" />
+
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"  integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
+
+    <!-- Code Syntax Highlighting -->
+    <link rel="stylesheet" href="https://gitcdn.link/repo/jwarby/jekyll-pygments-themes/master/github.css" />
+
+    <!-- Styles -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐱</text></svg>">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="canonical" href="https://akkapakasaikiran.github.io/blog/2022/ego4d-summary/">
+
+    <!-- Dark Mode -->
+    <script src="/assets/js/theme.js"></script>
+    <script src="/assets/js/dark_mode.js"></script>
+
+    <!-- MathJax -->
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        tags: 'ams'
+      }
+    };
+  </script>
+  <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"></script>
+  <script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+
+    <!-- Distill js -->
+    <script src="/assets/js/distillpub/template.v2.js"></script>
+    <script src="/assets/js/distillpub/transforms.v2.js"></script>
+    
+  </head>
+
+  <d-front-matter>
+    <script async type="text/json">{
+      "title": "Dataset Summary: Ego4D",
+      "description": "Notes on the recently announced Ego4D dataset",
+      "published": "January 5, 2022",
+      "authors": [
+        {
+          "author": "Akkapaka Saikiran",
+          "authorURL": "https://akkapakasaikiran.github.io/",
+          "affiliations": [
+            {
+              "name": "CSE, IIT Bombay",
+              "url": ""
+            }
+          ]
+        }
+        
+      ],
+      "katex": {
+        "delimiters": [
+          {
+            "left": "$",
+            "right": "$",
+            "display": false
+          },
+          {
+            "left": "$$",
+            "right": "$$",
+            "display": true
+          }
+        ]
+      }
+    }</script>
+  </d-front-matter>
+
+  <body class="fixed-top-nav">
+
+    <!-- Header -->
+    <header>
+
+      <!-- Nav Bar -->
+      <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
+        <div class="container">
+          <a class="navbar-brand title font-weight-lighter" href="https://akkapakasaikiran.github.io/">
+              Akkapaka <span class="font-weight-bold">Saikiran</span>
+          </a>
+          <!-- Navbar Toggle -->
+          <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar top-bar"></span>
+            <span class="icon-bar middle-bar"></span>
+            <span class="icon-bar bottom-bar"></span>
+          </button>
+
+          <div class="collapse navbar-collapse text-right" id="navbarNav">
+            <ul class="navbar-nav ml-auto flex-nowrap">
+
+              <!-- About -->
+              <li class="nav-item ">
+                <a class="nav-link" href="/">about</a>
+              </li>
+              
+              <!-- Blog -->
+              <li class="nav-item active">
+                <a class="nav-link" href="/blog/">blog</a>
+              </li>
+
+              <!-- Other pages -->
+              <li class="nav-item ">
+                <a class="nav-link" href="/assets/pdf/CV.pdf">cv</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="/misc">miscellaneous</a>
+              </li>
+
+              <!-- Toogle theme mode -->
+              <div class="toggle-container">
+                <a id="light-toggle">
+                  <i class="fas fa-moon"></i>
+                  <i class="fas fa-sun"></i>
+                </a>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Content -->
+    <div class="post distill">
+
+      <d-title>
+        <h1>Dataset Summary: Ego4D</h1>
+        <p>Notes on the recently announced Ego4D dataset</p>
+      </d-title>
+
+      <d-byline></d-byline>
+
+      <d-article>
+        
+
+        <p>Resources: 
+<a href="https://ego4d-data.org/" target="_blank" rel="noopener noreferrer">Website</a> | 
+<a href="https://arxiv.org/abs/2110.07058" target="_blank" rel="noopener noreferrer">ArXiv</a> | 
+<a href="https://www.youtube.com/watch?v=2dau0W0NVQY" target="_blank" rel="noopener noreferrer">Release video</a></p>
+
+<p><strong>What is it?</strong> 
+“A massive-scale, egocentric dataset and benchmark suite collected across 74 worldwide locations and 9 countries [855 unique camera wearers], with over 3,025 hours of daily-life activity video.” 
+People wear cameras (head-mounted) and record activities like walking, cooking, cleaning, etc. These videos are mostly unscripted and ‘in the wild’.</p>
+
+<p><strong>Motivation.</strong> 
+Computer Vision has come very far by using internet images (and videos) for its datasets (eg. ImageNet, Kinetics, MS COCO, etc.). 
+But these datasets are well-curated, disembodied, in isolated moments of time, and in the third-person view. 
+These limitations hamper progress in robot learning and augmented reality research. 
+Ego4D provides uncurated, multimodal, first-person streams of data that depend on agents’ attention and actions.</p>
+
+<p><strong>Novelty.</strong> 
+Some existing egocentric datasets: EPIC-Kitchens, UT Ego, EGTEA Gaze+, etc. 
+Ego4D improves on the scale (no. of hours of video as well as no. of participants), diversity (74 locations), and realism.</p>
+
+<p><strong>Dataset details.</strong> 
+People wore cameras for 1-10 hrs ⇒ long-form videos capturing many activities (many of which are probably mundane). 
+“Portions of the dataset also provide audio, 3D mesh scans, gaze, stereo, and/or synchronized multi-camera views”. 
+Multiple cameras are used, and this variety gives rise to different fields of view (eg. some look down on hands, others look ahead). 
+2207 hours from the total 3025 hours have audio associated with the videos.</p>
+
+<p><strong>Narrations.</strong> 
+All videos have temporally dense narrations (on average 13.2 sentences per minute of video) associated with them that describe the activities taking place (on average 7.4 words long). 
+These narrations are manually annotated and amount to 3.85M sentences in total containing 1772 unique verbs (actions) and 4336 unique nouns (objects). 
+Videos are also divided into 5 min clips that have a multiple-sentence summary associated with them. 
+Ego4D can thus be viewed as a large-scale dataset of aligned language and video, similar to HowTo100M. 
+It thus gives way to many grounded vision-language tasks like retrieval and captioning.</p>
+
+<p><strong>Benchmarks.</strong> 
+Egocentric vision demands novel approaches of video understanding to account for long-form video, attention cues, person-object interaction, multi-sensory data, and the lack of manual temporal curation inherent to a passively worn camera. To this end, Ego4D comes with a set of benchmark tasks and associated baseline models that use SoTA components. 
+The benchmarks are: 1) Episodic Memory, 2) Hands and Objects, 3) Audio-visual Diarization, 4) Social Interactions, and 5) Forecasting.</p>
+
+
+      </d-article>
+
+      <d-appendix>
+        <d-footnote-list></d-footnote-list>
+        <d-citation-list></d-citation-list>
+      </d-appendix>
+
+    </div>
+
+    <!-- Footer -->    
+    <footer class="fixed-bottom">
+      <div class="container mt-0">
+        © Copyright 2024 Akkapaka Saikiran. Powered by <a href="http://jekyllrb.com/" target="_blank" rel="noopener noreferrer">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" target="_blank" rel="noopener noreferrer">al-folio</a> theme.
+Last updated: January 03, 2024.
+      </div>
+    </footer>
+
+  </body>
+
+  
+
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+
+  <script src="/assets/js/distillpub/overrides.js"></script>
+
+</html>
