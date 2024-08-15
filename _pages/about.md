@@ -23,8 +23,8 @@ I completed my undergraduate in Computer Science and Engineering from the Indian
 
 I've had the pleasure of interning at 
 - [Egonym AG](https://egonym.com/), working on anonymizing faces using diffusion models
-- [Microsoft](https://microsoft.com), working on classifying Bing Ads
+- [Microsoft](https://microsoft.com), working on classifying Bing ads
 - [Abacus.ai](https://abacus.ai), working on explainable recommender systems
 - [ENS Paris-Saclay]() with Prof. [Alain Finkel](http://www.lsv.fr/~finkel/), working on formal methods
 
-I am passionate about carnatic music and [cycling](https://www.strava.com/athletes/116391594). I also enjoy [reading](https://www.goodreads.com/skeleton-detective) and playing table tennis.   
+I am passionate about carnatic music and [cycling](https://www.strava.com/athletes/116391594). I also like [reading](https://www.goodreads.com/skeleton-detective), [writing](https://asaikiran.medium.com/), and playing table tennis.   

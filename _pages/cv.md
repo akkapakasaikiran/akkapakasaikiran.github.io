@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /assets/pdf/CV.pdf
-title: cv
+title: CV
 description: Curriculum Vitae
 nav: true
 ---
