@@ -2,7 +2,7 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title:  # the website title (if blank, full name will be used instead)
+title: Akkapaka Saikiran # the website title (if blank, full name will be used instead)
 name: Saikiran
 surname: Akkapaka
 email: saikiraniitb at gmail dot com
@@ -44,7 +44,7 @@ rss_icon: false
 # Layout
 # -----------------------------------------------------------------------------
 
-navbar_fixed: false
+navbar_fixed: true
 footer_fixed: true
 search_enabled: false
 socials_in_search: true
